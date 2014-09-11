@@ -1,0 +1,3 @@
+[submodule "salt/roots/formulas/utils"]
+	path = salt/roots/formulas/utils
+	url = https://github.com/joshsmith2/salt-utils.git

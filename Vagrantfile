@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "chef/ubuntu-14.04"
-  config.vm.hostname = "salty-vagbox"
+  config.vm.hostname = "testy-vagbox"
 
   #Mount Salt file root
   config.vm.synced_folder "salt/roots/", "/srv/"

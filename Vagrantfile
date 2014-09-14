@@ -15,6 +15,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   #Mount Salt file root
   config.vm.synced_folder "salt/roots/", "/srv/"
+  config.vm.synced_folder "codeshare", "/opt/codeshare"
+
+  #Forward ports for web development
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 8000, host: 8001
 
   config.vm.provision :salt do |salt|
     salt.minion_config = "salt/minion"

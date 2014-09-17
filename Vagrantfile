@@ -20,6 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #Forward ports for web development
   config.vm.network "forwarded_port", guest: 80, host: 8080
   config.vm.network "forwarded_port", guest: 8000, host: 8001
+  #config.vm.network "forwarded_port", guest: 4444, host: 4445 #Selenium
 
   config.vm.provision :salt do |salt|
     salt.minion_config = "salt/minion"

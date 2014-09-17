@@ -2,4 +2,4 @@ base:
   '*':
     - utils
     - goat
-    
+

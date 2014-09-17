@@ -1,6 +1,8 @@
 ##Josh-specific config
+.idea/
 .vagrant/
 *.sqlite3
+*.swp
 
 ##Standard gitignore for Ruby:
 *.gem

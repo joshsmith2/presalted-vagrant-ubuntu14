@@ -30,7 +30,7 @@ class NewVisitorTest(unittest.TestCase):
         self.assertIn(row_text, [row.text for row in rows])
 
     def test_can_start_a_list_and_retrieve_it_later(self):
-        self.browser.get('http://localhost:8001')
+        self.browser.get('http://localhost:8000')
 
         # User sees that this is a 'to do' site
         message = "To-do"

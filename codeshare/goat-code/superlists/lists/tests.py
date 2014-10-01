@@ -43,6 +43,8 @@ class HomePageTest(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response['location'], '/')
 
+class ItemModelTest(TestCase):
+
     def test_saving_and_retrieving_items(self):
         first_item = Item()
         first_item.text = 'The first (ever) list item'

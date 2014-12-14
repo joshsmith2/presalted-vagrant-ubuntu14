@@ -25,7 +25,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.browser.get(self.live_server_url)
 
         # User sees that this is a 'to do' site
-        message = "To-do"
+        message = "To-Do"
         self.assertIn(message, self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn(message, header_text)

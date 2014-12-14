@@ -3,6 +3,7 @@
 .vagrant/
 *.sqlite3
 *.swp
+codeshare/test-env
 
 ##Standard gitignore for Ruby:
 *.gem

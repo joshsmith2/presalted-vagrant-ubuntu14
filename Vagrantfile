@@ -11,24 +11,27 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "chef/ubuntu-14.04"
-  config.vm.hostname = "testy-vagbox"
+  config.vm.hostname = "test-driven-docker"
 
   #Mount Salt file root
   config.vm.synced_folder "salt/roots/", "/srv/"
   config.vm.synced_folder "codeshare", "/opt/codeshare"
 
   #Forward ports for web development
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 8000, host: 8001
-  #config.vm.network "forwarded_port", guest: 4444, host: 4445 #Selenium
+  config.vm.network "forwarded_port", guest: 80, host: 8082
+  config.vm.network "forwarded_port", guest: 8000, host: 8002
+  
+  config.vm.provision "docker",
+    images: ["ubuntu"]
 
   config.vm.provision :salt do |salt|
     salt.minion_config = "salt/minion"
     salt.run_highstate = true
   end
+
 end
 
-#^^^^   Hogarth specific config   ^^^^#
+#^^^^   Josh's specific config   ^^^^#
 #vvvv  Standard Vagrantfile stuff vvvv#
 
 
